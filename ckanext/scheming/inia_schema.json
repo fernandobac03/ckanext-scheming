@@ -14,7 +14,7 @@
       "preset": "fluent_core_translated",
       "form_placeholder": "eg. Title of the dataset ...",
       "label": {
-        "en": "Title",
+        "en": "Title"
       }
     },
     {
