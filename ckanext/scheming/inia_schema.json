@@ -10,14 +10,6 @@
       "form_placeholder": "ej. Arboles del sector ..."
     },
     {
-      "field_name": "title_translated",
-      "preset": "fluent_core_translated",
-      "label": {
-        "en": "Title",
-        "es": "Titulo"
-      }
-    },
-    {
       "field_name": "name",
       "label": "URL",
       "preset": "dataset_slug",
@@ -145,8 +137,13 @@
       "label": "Versión",
       "validators": "ignore_missing int_validator",
       "form_placeholder": "eg. 2"
+    },
+    {
+      "field_name": "tag_string",
+      "label": "Tags",
+      "preset": "tag_string_autocomplete",
+      "form_placeholder": "eg. economy, mental health, government"
     }
-
   ],
   "resource_fields": [
     {
