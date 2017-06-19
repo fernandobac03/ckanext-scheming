@@ -7,7 +7,15 @@
       "field_name": "title",
       "label": "Título",
       "preset": "title",
-      "form_placeholder": "eg. Larry, Peter, Susan"
+      "form_placeholder": "ej. Arboles del sector ..."
+    },
+    {
+      "field_name": "title_translated",
+      "preset": "fluent_core_translated",
+      "form_placeholder": "eg. Title of the dataset ...",
+      "label": {
+        "en": "Title",
+      }
     },
     {
       "field_name": "name",
