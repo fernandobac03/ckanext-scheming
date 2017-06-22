@@ -31,7 +31,7 @@
       "field_name": "authors",
       "preset": "repeating_text",
       "label": "Colaboradores",
-      "form_blanks": 2
+      "form_blanks": 20
     },
     {
       "field_name": "tematica",
