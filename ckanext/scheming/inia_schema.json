@@ -5,9 +5,26 @@
   "dataset_fields": [
     {
       "field_name": "title",
-      "label": "Título",
+      "label": "Título 1",
       "preset": "title",
-      "form_placeholder": "ej. Arboles del sector ..."
+      "form_placeholder": "Plantas provenientes de ... "
+    },
+    {
+      "field_name": "idiomatitulo1",
+      "label": "Idioma Título 1",
+      "help_text": "Idioma del titulo 1",
+      "help_inline": true,
+      "preset": "select",
+      "choices": [
+         {
+           "value": "inglestitulo1",
+           "label": "Ingles"
+         }, 
+         {
+           "value": "espanoltitulo1",
+           "label": "Español"
+         }
+      ]
     },
     {
       "field_name": "name",
@@ -15,28 +32,204 @@
       "preset": "dataset_slug",
       "form_placeholder": "eg. arboles-de-"
     },
+
+    {
+      "field_name": "title2",
+      "label": "Título 2",
+      "preset": "title",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "idiomatitulo2",
+      "label": "Idioma Título 2",
+      "help_text": "Idioma del titulo 2",
+      "help_inline": true,
+      "preset": "select",
+      "choices": [
+         {
+           "value": "espanoltitulo2",
+           "label": "Español"
+         }, 
+         {
+           "value": "inglestitulo2",
+           "label": "Ingles"
+         }
+      ]
+    },
     {
       "field_name": "notes",
       "label": "Descripción",
       "form_snippet": "markdown.html",
-      "form_placeholder": "eg. Some useful notes about the data"
+      "form_placeholder": "ej. Alguna descripción sobre el conjunto de datos"
     },
     {
       "field_name": "author",
-      "label": "Autor",
+      "label": "Autor 1",
       "form_placeholder": "Joe Bloggs",
       "display_property": "dc:creator"
+    },
+    {
+      "field_name": "author_email",
+      "label": "Email Autor",
+      "form_placeholder": "joe@example.com",
+      "display_property": "dc:creator",
+      "display_snippet": "email.html",
+      "display_email_name_field": "author"
+    },
+    {
+      "field_name": "owner_org",
+      "label": "Organizacion",
+      "preset": "dataset_organization"
     },
     {
       "field_name": "authors",
       "preset": "repeating_text",
       "label": "Colaboradores",
-      "form_blanks": 20
+      "form_blanks": 8
+    },
+    {
+      "field_name": "autores",
+      "preset": "repeating_group_fields",
+      "label": "Autores",
+      "field_name_subfields": ["subfield_email", "subfield_orcid"],
+      "field_label_subfields": ["Email", "Orcid"],
+      "form_blanks": 8
+    },
+    {
+      "field_name": "subfield_email",
+      "preset": "repeating_simple_in_group_fields",
+      "label": "Email",
+      "form_blanks": 8
+    },   {
+      "field_name": "subfield_orcid",
+      "preset": "repeating_simple_in_group_fields",
+      "label": "Orcid",
+      "form_blanks": 8
+    },
+    {
+      "field_name": "contacto",
+      "label": "Contacto",
+      "form_placeholder": "Joe Bloggs",
+      "display_property": "dc:creator"
+    },
+    {
+      "field_name": "contacto_email",
+      "label": "Email Contacto",
+      "form_placeholder": "contacto@example.com",
+      "display_property": "dc:creator",
+      "display_snippet": "email.html",
+      "display_email_name_field": "author"
+    },
+    {
+      "field_name": "colaboradores",
+      "preset": "repeating_group_fields",
+      "label": "Colaboradores",
+      "field_name_subfields": ["subfield_email_colaboradores", "subfield_orcid_colaboradores"],
+      "field_label_subfields": ["Email", "Orcid"],
+      "form_blanks": 8
+    },
+    {
+      "field_name": "subfield_email_colaboradores",
+      "preset": "repeating_simple_in_group_fields",
+      "label": "Email",
+      "form_blanks": 8
+    },   {
+      "field_name": "subfield_orcid_colaboradores",
+      "preset": "repeating_simple_in_group_fields",
+      "label": "Orcid",
+      "form_blanks": 8
+    },
+    {
+      "field_name": "organismo",
+      "label": "Organismo",
+      "preset": "select",
+      "choices": [
+         {
+           "value": "inia_organismo",
+           "label": "INIA"
+         },
+         {
+           "value": "otro_organismo",
+           "label": "Otro"
+         }
+      ]
+    },
+    {
+      "field_name": "fechapublicaion",
+      "label": "Fecha de Publicación",
+      "form_placeholder": "Formato: a  o-mes-d  a     Ejemplo: 2016-09-25",
+      "preset": "date"
+    },
+
+    {
+      "field_name": "tag_string",
+      "label": "Palabras Clave",
+      "preset": "tag_string_autocomplete",
+      "form_placeholder": "eg. economy, mental health, government"
     },
     {
       "field_name": "tematica",
       "label": "Temática",
       "form_placeholder": "Campo o área de investigación"
+    },
+    {
+      "field_name": "idioma",
+      "label": "Idioma",
+      "help_text": "Idioma del dataset",
+      "help_inline": true,
+      "preset": "select",
+      "choices": [
+         {
+           "value": "ingles",
+           "label": "English/Ingles"
+         },
+         {
+           "value": "espa  ol",
+           "label": "Spanish/Espa  ol"
+         },
+         {
+           "value": "otro",
+           "label": "Otro"
+         }
+      ]
+    },
+    {
+      "field_name": "nombre_proyecto",
+      "label": "Nombre del Proyecto",
+      "form_placeholder": "Nombre del proyecto en el cual se ha creado el dataset"
+    },
+    {
+      "field_name": "entefinanciador_proyecto",
+      "label": "Ente financiador",
+      "form_placeholder": "organización o convocatoria/organización"
+    },
+    {
+      "field_name": "webfinanciador_proyecto",
+      "label": "Web del financiador",
+      "form_placeholder": "url"
+    },
+    {
+      "field_name": "codigoproyecto_proyecto",
+      "label": "Código de proyecto",
+      "form_placeholder": ""
+    }, 
+    {
+      "field_name": "fechainicio_ambitotemporal",
+      "label": "Ámbito temporal (fecha inicio)",
+      "form_placeholder": "Formato: a  o-mes-d  a     Ejemplo: 2016-09-25",
+      "preset": "date"
+    },
+    {
+      "field_name": "fechafinal_ambitotemporal",
+      "label": "Ámbito temporal (fecha final)",
+      "form_placeholder": "Formato: a  o-mes-d  a     Ejemplo: 2016-09-28",
+      "preset": "date"
+    },
+    {
+      "field_name": "descripcion_ambitotemporal",
+      "label": "Ámbito temporal (Descripci  n)",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "Descripción textual periodo de tiempo relacionado con el contenido o la toma de muestras del Dataset, este metadato está especialmente indicado en los ámbitos de investigación donde es habitual  expresar los periodos se de manera textual por ejemplos: siglo XVI, Edad media."
     },
     {
       "field_name": "license_id",
@@ -94,40 +287,6 @@
       "form_placeholder": "..."
     },
     {
-      "field_name": "idioma",
-      "label": "Idioma",
-      "help_text": "Idioma del dataset",
-      "help_inline": true,
-      "preset": "select",
-      "choices": [
-         {
-           "value": "ingles",
-           "label": "English/Ingles"
-         }, 
-         {
-           "value": "español",
-           "label": "Spanish/Español"
-         },
-         {
-           "value": "otro",
-           "label": "Otro"
-         }
-      ]
-    },
-    {
-      "field_name": "author_email",
-      "label": "Correo Electrónico",
-      "form_placeholder": "joe@example.com",
-      "display_property": "dc:creator",
-      "display_snippet": "email.html",
-      "display_email_name_field": "author"
-    },
-    {
-      "field_name": "owner_org",
-      "label": "Organizacion",
-      "preset": "dataset_organization"
-    },
-    {
       "field_name": "docdelosdatos",
       "label": "Documentación de los datos",
       "form_placeholder": "Documentación..."
@@ -137,12 +296,6 @@
       "label": "Versión",
       "validators": "ignore_missing int_validator",
       "form_placeholder": "eg. 2"
-    },
-    {
-      "field_name": "tag_string",
-      "label": "Tags",
-      "preset": "tag_string_autocomplete",
-      "form_placeholder": "eg. economy, mental health, government"
     }
   ],
   "resource_fields": [
@@ -193,3 +346,4 @@
     }
   ]
 }
+
