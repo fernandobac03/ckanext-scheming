@@ -97,12 +97,12 @@
     },
     {
       "field_name": "subfield_email",
-      "preset": "repeating_simple_in_group_fields",
+      "preset": "repeating_single_in_group_fields",
       "label": "Email",
       "form_blanks": 8
     },   {
       "field_name": "subfield_orcid",
-      "preset": "repeating_simple_in_group_fields",
+      "preset": "repeating_single_in_group_fields",
       "label": "Orcid",
       "form_blanks": 8
     },
@@ -130,12 +130,12 @@
     },
     {
       "field_name": "subfield_email_colaboradores",
-      "preset": "repeating_simple_in_group_fields",
+      "preset": "repeating_single_in_group_fields",
       "label": "Email",
       "form_blanks": 8
     },   {
       "field_name": "subfield_orcid_colaboradores",
-      "preset": "repeating_simple_in_group_fields",
+      "preset": "repeating_single_in_group_fields",
       "label": "Orcid",
       "form_blanks": 8
     },
