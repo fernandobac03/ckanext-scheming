@@ -36,7 +36,6 @@
     {
       "field_name": "title2",
       "label": "Título 2",
-      "preset": "title",
       "form_placeholder": ""
     },
     {
@@ -63,34 +62,14 @@
       "form_placeholder": "ej. Alguna descripción sobre el conjunto de datos"
     },
     {
-      "field_name": "author",
-      "label": "Autor 1",
-      "form_placeholder": "Joe Bloggs",
-      "display_property": "dc:creator"
-    },
-    {
-      "field_name": "author_email",
-      "label": "Email Autor",
-      "form_placeholder": "joe@example.com",
-      "display_property": "dc:creator",
-      "display_snippet": "email.html",
-      "display_email_name_field": "author"
-    },
-    {
       "field_name": "owner_org",
-      "label": "Organizacion",
+      "label": "Organización del Dataset",
       "preset": "dataset_organization"
-    },
-    {
-      "field_name": "authors",
-      "preset": "repeating_text",
-      "label": "Colaboradores",
-      "form_blanks": 8
     },
     {
       "field_name": "autores",
       "preset": "repeating_group_fields",
-      "label": "Autores",
+      "label": "Autor",
       "field_name_subfields": ["subfield_email", "subfield_orcid"],
       "field_label_subfields": ["Email", "Orcid"],
       "form_blanks": 8
@@ -123,7 +102,7 @@
     {
       "field_name": "colaboradores",
       "preset": "repeating_group_fields",
-      "label": "Colaboradores",
+      "label": "Colaborador",
       "field_name_subfields": ["subfield_email_colaboradores", "subfield_orcid_colaboradores"],
       "field_label_subfields": ["Email", "Orcid"],
       "form_blanks": 8
@@ -181,11 +160,11 @@
       "choices": [
          {
            "value": "ingles",
-           "label": "English/Ingles"
+           "label": "en"
          },
          {
            "value": "espa  ol",
-           "label": "Spanish/Espa  ol"
+           "label": "es"
          },
          {
            "value": "otro",
@@ -227,7 +206,7 @@
     },
     {
       "field_name": "descripcion_ambitotemporal",
-      "label": "Ámbito temporal (Descripci  n)",
+      "label": "Ámbito temporal (Descripciòn)",
       "form_snippet": "markdown.html",
       "form_placeholder": "Descripción textual periodo de tiempo relacionado con el contenido o la toma de muestras del Dataset, este metadato está especialmente indicado en los ámbitos de investigación donde es habitual  expresar los periodos se de manera textual por ejemplos: siglo XVI, Edad media."
     },
@@ -238,64 +217,30 @@
       "help_text": "Información adicional sobre licencias se puede encontrar en http://opendefinition.org/"
     },
     {
-      "field_name": "dddyp",
-      "label": "Declaración de Derechos y Privacidad",
-      "form_placeholder": "Declaración de ..."
+      "field_name": "cita",
+      "label": "Cita",
+      "form_placeholder": ""
     },
     {
-      "field_name": "licenciaabierta",
-      "label": "Licencia Abierta",
-      "help_text": "Si o No",
-      "help_inline": true,
-      "preset": "select",
-      "choices": [
-         {
-           "value": "si",
-           "label": "Si"
-         }, 
-         {
-           "value": "no",
-           "label": "No"
-         }
-      ]
+      "field_name": "instrumedida",
+      "label": "Instrumentación de medida",
+      "form_placeholder": ""
     },
     {
-      "field_name": "localizables",
-      "label": "Localizables",
-      "form_placeholder": "..."
-    },
-    {
-      "field_name": "recursosrelacionados",
-      "label": "Recursos relacionados",
-      "form_placeholder": "..."
-    },
-    {
-      "field_name": "fechacreacion",
-      "label": "Fecha de creación",
-      "form_placeholder": "Formato: año-mes-día     Ejemplo: 2016-09-25",
-      "preset": "date"
-    },
-    {
-      "field_name": "fechamodificacion",
-      "label": "Fecha de modificación",
-      "form_placeholder": "Formato: año-mes-día     Ejemplo: 2016-09-28",
-      "preset": "date"
-    },
-    {
-      "field_name": "informaciongeografica",
-      "label": "Información geográfica",
-      "form_placeholder": "..."
-    },
-    {
-      "field_name": "docdelosdatos",
-      "label": "Documentación de los datos",
-      "form_placeholder": "Documentación..."
-    },
-    {
-      "field_name": "version",
-      "label": "Versión",
+      "field_name": "numelementos",
+      "label": "Número de elementos",
       "validators": "ignore_missing int_validator",
       "form_placeholder": "eg. 2"
+    },
+    {
+      "field_name": "softrelacionado",
+      "label": "Software relacionado",
+      "form_placeholder": ""
+    },
+    {
+      "field_name": "quality",
+      "label": "Calidad",
+      "preset": "quality"
     }
   ],
   "resource_fields": [
