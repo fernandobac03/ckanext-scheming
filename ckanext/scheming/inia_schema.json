@@ -70,8 +70,8 @@
       "field_name": "autores",
       "preset": "repeating_group_fields",
       "label": "Autor",
-      "field_name_subfields": ["subfield_email", "subfield_orcid"],
-      "field_label_subfields": ["Email", "Orcid"],
+      "field_name_subfields": ["subfield_email", "subfield_orcid","subfield_select_org_dep","subfield_select2_org_dep"],
+      "field_label_subfields": ["Email", "Orcid", "Departamento", "Departamento INIA"],
       "form_blanks": 8
     },
     {
@@ -79,7 +79,50 @@
       "preset": "repeating_single_in_group_fields",
       "label": "Email",
       "form_blanks": 8
-    },   {
+    },   
+    {
+      "field_name": "subfield_select_org_dep",
+      "preset": "repeating_select_org_dep_in_group",
+      "label": "Departamento",
+      "field_name_subfields": ["subfield_select2_org_dep"],
+      "form_blanks": 8,
+      "choices": [
+         {
+           "value": "INIA",
+           "label": "INIA"
+         },
+         {
+           "value": "Otro",
+           "label": "Otro"
+         }
+      ]
+    },
+    {
+      "field_name": "subfield_select2_org_dep",
+      "preset": "repeating_select2_org_dep_in_group",
+      "label": "Departamento INIA",
+      "form_blanks": 8,
+      "choices": [
+         {
+           "value": "CIFOR",
+           "label": "CIFOR"
+         },
+         {
+           "value": "CISA",
+           "label": "CISA"
+         },
+	 {
+	   "value": "CRF",
+           "label": "CRF"
+         },
+         {
+           "value": "ninguno",
+           "label": "ninguno"
+         }
+      ]
+     },
+
+    {
       "field_name": "subfield_orcid",
       "preset": "repeating_single_in_group_fields",
       "label": "Orcid",
@@ -103,35 +146,110 @@
       "field_name": "colaboradores",
       "preset": "repeating_group_fields",
       "label": "Colaborador",
-      "field_name_subfields": ["subfield_email_colaboradores", "subfield_orcid_colaboradores"],
-      "field_label_subfields": ["Email", "Orcid"],
+      "field_name_subfields": ["subfield_select_rol", "subfield_organizacion_colaborador"],
+      "field_label_subfields": ["Rol", "Organizacion"],
       "form_blanks": 8
     },
     {
-      "field_name": "subfield_email_colaboradores",
+      "field_name": "subfield_select_rol",
+      "preset": "repeating_select_basic",
+      "label": "Rol",
+      "form_blanks": 8,
+      "choices": [
+         {
+           "value": "datacollector",
+           "label": "Data Collector"
+         },
+         {
+           "value": "datacuratos",
+           "label": "Data Curator"
+         },
+         {
+           "value": "datamanager",
+           "label": "Data Manager"
+         },
+         {
+           "value": "distributor",
+           "label": "Distributor"
+         },
+         {
+           "value": "editor",
+           "label": "Editor"
+         },
+         {
+           "value": "hostinginstitution",
+           "label": "Hosting Institution"
+         },
+         {
+           "value": "producer",
+           "label": "Producer"
+         },
+         {
+           "value": "projectleader",
+           "label": "Project Leader"
+         },
+         {
+           "value": "projectmanager",
+           "label": "Project Manager"
+         },
+         {
+           "value": "projectmember",
+           "label": "Project Member"
+         },
+         {
+           "value": "registrationagency",
+           "label": "Registration Agency"
+         },
+         {
+           "value": "registrationauthority",
+           "label": "Registration Authority"
+         },
+         {
+           "value": "relatedperson",
+           "label": "Related Person"
+         },
+         {
+           "value": "researcher",
+           "label": "Researcher"
+         },
+         {
+           "value": "researchgroup",
+           "label": "Research Group"
+         },
+         {
+           "value": "rightsholder",
+           "label": "Rights Holder"
+         },
+         {
+           "value": "sponsor",
+           "label": "Sponsor"
+         },
+         {
+           "value": "supervisor",
+           "label": "Supervisor"
+         },
+         {
+           "value": "workpackageleader",
+           "label": "Work Package Leader"
+         },
+         {
+           "value": "other",
+           "label": "Other"
+         }
+      ]
+    },
+    {
+      "field_name": "subfield_organizacion_colaborador",
       "preset": "repeating_single_in_group_fields",
-      "label": "Email",
-      "form_blanks": 8
-    },   {
-      "field_name": "subfield_orcid_colaboradores",
-      "preset": "repeating_single_in_group_fields",
-      "label": "Orcid",
+      "label": "Organizacion",
       "form_blanks": 8
     },
     {
       "field_name": "organismo",
       "label": "Organismo",
-      "preset": "select",
-      "choices": [
-         {
-           "value": "inia_organismo",
-           "label": "INIA"
-         },
-         {
-           "value": "otro_organismo",
-           "label": "Otro"
-         }
-      ]
+      "field_text": "INIA",
+      "display": "false", 
+      "preset": "custom_text"
     },
     {
       "field_name": "fechapublicaion",
@@ -291,4 +409,3 @@
     }
   ]
 }
-
